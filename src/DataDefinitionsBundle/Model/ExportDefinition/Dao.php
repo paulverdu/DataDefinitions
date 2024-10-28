@@ -39,7 +39,7 @@ class Dao extends Model\Dao\PimcoreLocationAwareConfigDao
 
         parent::configure([
             'containerConfig' => $definitions,
-            'settingsStoreScope' => 'data_definitions',
+            'settingsStoreScope' => 'data_definitions.' . self::CONFIG_KEY,
             'storageConfig' => $storageConfig,
         ]);
     }
